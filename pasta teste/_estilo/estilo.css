@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(173, 173, 190);
+    color: #333538;
+    margin: 10px;
+}
+h1#titulo{
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    background: white;
+}
+nav#menu{
+    display: block;
+    margin-top: 10px;
+    
+}
+nav#menu ul{
+    text-align: center;
+    position: relative; /* movimenta os itens para qualquer parte do site */
+        
+    /* position: relative;  movimenta os itens apanes detro do conteiner ou caixa do menu */
+          /* com a possição absoluta, o top movimenta o item para cima, -20 é além da borda padrão */
+            /* com a possição absoluta, o left movimenta o item para esquerda */    
+        color: white;
+}
+nav#menu li {
+    display: inline-block;  /* coloca os itens da li um ao lado do outro */
+    background: #333538;  /* colocando uma cor no fundo do texto */
+    padding: 10px;  /* aumenta o tamanho do espaçamento do fundo do texto */
+    margin: 2px;   /* aumenta o espaçamento entre os texto com fundo */
+    transition: background-color 0.5s;    /* tempo de 1 segundo para mudar a cor do background quando solicitado */
+}
+
+nav#menu li:hover {     /* efeito da ação de quando passar o mouse na lista */
+    background-color: rgb(0, 60, 255);  /* cor que aparece quando passar o mouse */
+
+}
+
+a {
+    text-decoration: none;  /* tira a formatação do texto e underline */
+    font-weight: bolder;
+    font: 12pt Arial;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline; /* aparece anderline quando o mouse 
+    o underline estiver sobre a palavra */
+}
+
+
+footer#rodape {
+    clear: both;    /* limpar o rodapé e deixa só o texto do footer  */
+    border-top: 2px solid #ffffff;
+}
+
+footer#rodape p {
+    text-align: center;
+}

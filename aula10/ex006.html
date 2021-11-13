@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            position: absolute; /* absolute é ocupar uma area especifica de
+                                    qualquer posição do site*/
+            font: normal 20pt Arial;
+            background: rgb(0, 255, 221);
+            height: 200px;      /* Altura */
+            width: 200px;       /* Largura */
+            line-height: 200px; /* linha do texto na Altura de 200px*/
+            text-align: center; /* texto centralizado */
+        }
+        div#area2 {
+            position: absolute;
+            font: bolder 20pt Arial;
+            background: rgb(165, 151, 94);
+            margin: 0px 400px 600px 250px;      /* margem: cima, direita, baixo e esquerda */
+            height: 200px;
+            width: 300px;   /* Largura */
+            line-height: 200px;
+            text-align: center            
+        }
+    </style>
+</head>
+<body>
+    <!-- onclick = ação quando clicar com o mouse -->
+    <div id='area'> 
+        Interaja..
+    </div>
+    <div id= 'area2'>
+
+        Ação a ser realizada
+    </div>
+
+    <script>
+        var areaDiv = window.document.getElementById('area') // chamada da ação pela id area
+        var areaDiv2 = window.document.getElementById('area2')
+        areaDiv.addEventListener('click', clicar)
+        areaDiv.addEventListener('mouseenter', entrar)
+        areaDiv.addEventListener('mouseout', sair)
+        areaDiv2.addEventListener('mouseenter', entrar2)
+        areaDiv2.addEventListener('mouseout', sair2)
+        areaDiv2.addEventListener('click', clicar2)
+
+        function clicar(){           
+           areaDiv.innerText ='Clicou!'  // ação realida ao clicar na area
+           areaDiv.style.background = 'red'
+        }
+        function entrar(){
+            areaDiv.innerText = 'Entrou!'
+        }
+        function sair(){
+            areaDiv.innerText = 'Saiu'
+            areaDiv.style.background = 'rgb(0, 255, 221'
+        }
+
+        function clicar2(){
+            areaDiv2.style.background = 'blue'            
+            areaDiv2.innerText = 'Clicou, mudou a cor'
+        }
+        function entrar2(){
+            areaDiv2.innerText = 'Entrou de novo'
+        }
+        function sair2(){
+            areaDiv2.innerText = 'Não saia, volte !'
+            areaDiv2.style.background= 'rgb(165, 151, 94)'
+        }
+
+    </script>
+</body>
+</html>

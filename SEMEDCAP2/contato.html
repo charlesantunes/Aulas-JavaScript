@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="_estilo/contato.css">
+    <script src="docJavaScript.js"></script>
+    <title>contato</title>
+</head>
+<body>
+    <body>
+        <header>
+            <div class="faixatop"> Site de criação independente, não oficial!</div>
+            <div>
+                <img id="logo-prefeitura" src="_imagem/logo.png">
+                <img id="logo-semed" src="_imagem/LOGO HORIZONTAL OFICIAL.png">
+                <img id="logo-governo" src="_imagem/logo_governo.png">
+            </div>
+            <blockquote>
+                <nav id="menu">            
+                  
+                    <ul class="titulo">
+                        <li><a href="index.html" class="titulo-muni">Inicio</a></li>               
+                        <li><a href="escolasmunicipais.html">ESCOLAS MUNICIPAIS</a></li>
+                        <li><a href="calcularprova.html">CALCULADORA DO PROF.</a></li>
+                        <li><a href="emprestimo.html">EMPRÉSTIMO</a></li>
+                        <li><a href="Galeria.html" >GALERIA DE FOTOS</a></li>
+                        <li><a href="contato.html">CONTATO</a></li>
+                     </ul>            
+                </nav>
+            </blockquote>
+        </header>
+
+    <h1 id="subt">FALE COM A SEMED</h1>
+    <section>
+        <fieldset id="contato-semed" ><legend><h2>TELEFONE RESIDENCIAL</h2></legend>
+            (91) 3462-4062
+        </fieldset>    
+        <fieldset id="endereco-semed"><legend><h2>ENDEREÇO DE E-MAIL</h2></legend>
+            semedcap2017@gmail.com
+        </fieldset>
+    </section>
+    <section id="cadastro">
+        <form method="GET" action="mailto:charleswcantunes@gmail.com" onclick="enviar()">
+            <fieldset id="usuario">
+                <legend id="ident-usuario">Identificação do Usuário</legend>   <!-- título/grupo do formulário p/ essa tabela -->
+            <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="30" maxlength="40" placeholder="Nome Completo"/></p> <!-- label é para direcionado p/ o campo referencia no caso nome, input é o campo de digitação, type é o tipo de texto para digitar, name é a identificação do campo nome, id é a identificação do input inteiro, size é o tamanho em visualização do campo de digitação, maxlength é a quantidade de caracteres que pode digitar, placeholder é uma pré visualização/dica que fica escrito na caixa de texto -->
+                <p><label for="cEmail">E-mail:</label><input type="email" name="tEmail" id="cEmail" size="30" maxlength="30"/></p>
+                <p><label for="cNasc">Data de Nascimento: </label><input type="date" name="tNasc" id="cNasc"/></p>
+                </fieldset>
+            <fieldset id="sexo"><legend>Sexo:</legend>
+                <!-- abaixo será usado radio (bolinhas) para escolher uma, assim, precisa ter no campo nome o mesmo valor para ficar alternando entre um ou o outro na hora de escolher o sexo, label serve para selecionar a bolinha mais facil com apenas clicando na palavra -->
+                <input type="radio" name="tSexo" id="cMasc"/><label for="cMasc">Masculino</label>
+                <input type="radio" name="tSexo" id="cFem"/><label for="cFem">Feminino</label>
+            </fieldset>
+            <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+                <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="30" maxlength="40" placeholder="Av., Rua , Trav."/></p>
+                <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="99"/></p>
+                <p><label for="cEst">Estado:</label>
+               <select name="tEst" id="cEst">    <!-- seleciona itens dentro do option -->
+                    <!-- informação feitas abaixo: optgroup é o grupo feito para cada região, value é o valor salvo no banco de dados, selected é o estado que aparece já selecionado -->
+                    <optgroup label="Região Norte">  <!-- cria grupo p/ dividir as regiões -->
+                        <option value="AC">Acre</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="PA" selected>Pará</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="TO">Tocantins</option>
+                    </optgroup>
+
+                    <optgroup label="Região Nordeste">
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="SE">Sergipe</option>
+                    </optgroup>
+
+                    <optgroup label="Região Centro-Oeste">
+                        <option value="DF">Distrito Federal</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                    </optgroup>
+
+                    <optgroup label="Região Sudeste">
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+
+                    <optgroup label="Região Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                </select>
+                </p>
+
+                <p><label>Cidade:</label><input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidade"/></p>     <!-- list é para receber valores da datalist -->
+                <datalist id="cidade">
+                    <option>Ananindeua</option>
+                    <option>Belém</option>
+                    <option>Benevides</option>
+                    <option>Capanema</option>
+                    <option>Castanhal</option>
+                    <option>Santarém</option>
+                </datalist>
+            </fieldset>
+            <fieldset id="usuario">
+                <legend id="ident-usuario">Login e Senha do Usuário</legend>   <!-- título/grupo do formulário p/ essa tabela -->
+            <p><label for="clogin">Login:</label> <input type="text" name="tlogin" id="clogin" size="17" maxlength="15" placeholder="Letras e Números"/></p>              
+            <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"/></p>
+            </fieldset>
+
+            <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                <p><label for="cUrg">Grau de Urgência:</label> Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Max</p>  <!-- range é uma barra podendo adicionar formatação de min e max, step é quanto casas a barra percorre -->
+                <p><label for="cMsg">Mensagem:</label><textarea name="tMsg" id="cMsg" cols="35" rows="6" placeholder="Deixe aqui seua mensagem"></textarea></p>     <!-- textarea é uma caixa de texto maior em espaço do que a text, cols é a quantidade de colunas da caixa e rows é a linha -->
+                <p id="enviar"><input type="image" name="tnome" src="_imagem/botao-enviar-pequeno.png"></p>
+            </fieldset>
+            
+        </form> 
+    </section>
+
+    <footer id="rodape">
+        <p>
+            &copy; SELLER - Charles Antunes - 2021</br>
+            <a href="https://www.facebook.com/charlinhoantunes" target="_blank">Facebook</a>
+            <a href="https://twitter.com/charlinhoantune" target="_blank"> | Twitter</a>
+        </p>
+    </footer>
+</body>
+</html>

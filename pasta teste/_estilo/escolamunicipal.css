@@ -1,0 +1,70 @@
+/* Configuração de estilos globais*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+a, a:visited {
+    color: #fff;
+}
+/* ---------------------------------------------------*/
+.faixatop{
+    line-height: 35px;
+    color: #fff;
+    background-color: #394475;
+    text-align: center;    
+}
+
+
+nav#menu{       /* backgroud do menu novo*/  
+    background:#2E2633;
+  width:100%;
+  height:35px;
+    
+}
+nav#menu ul{
+    text-align: center;
+    position: relative; /* movimenta os itens para qualquer parte do site */
+        
+    /* position: relative;  movimenta os itens apanes detro do conteiner ou caixa do menu */
+          /* com a possição absoluta, o top movimenta o item para cima, -20 é além da borda padrão */
+            /* com a possição absoluta, o left movimenta o item para esquerda */    
+        color: white;
+}
+nav#menu li {
+    display: inline-block;  /* coloca os itens da li um ao lado do outro */
+    background: #333538;  /* colocando uma cor no fundo do texto */
+    padding: 10px;  /* aumenta o tamanho do espaçamento do fundo do texto */
+    margin: 2px;   /* aumenta o espaçamento entre os texto com fundo */
+    transition: background-color 0.5s;    /* tempo de 1 segundo para mudar a cor do background quando solicitado */
+}
+
+nav#menu li:hover {     /* efeito da ação de quando passar o mouse na lista */
+    background-color: #394475;  /* cor que aparece quando passar o mouse */
+
+}
+
+.titulo a{
+    text-decoration: none;  /* tira a formatação do texto e underline */
+    font-weight: bolder;
+    font: 12pt Arial;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline; /* aparece anderline quando o mouse 
+    o underline estiver sobre a palavra */
+}
+footer#rodape {
+    clear: both;    /* limpar o rodapé e deixa só o texto do footer  */
+    border-top: 2px solid #394475;
+}
+
+footer#rodape p {
+    text-align: center;
+}

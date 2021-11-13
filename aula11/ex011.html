@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../_css/estilo1.css"/>
+    <title>País</title>    
+</head>
+<body>
+<div>
+    <h1>Brasileiro ou Estrangeiro?</h1>
+    <fieldset><legend class="leg">Digite sua Nacionalidade</legend>
+        <label for="cpais">Nacionalidade: </label><input type="text" name="tpais" id="cpais" maxlength="20" size="16"/>
+        <input type="button" class="botao" value="Pesquisar" onclick="pais()"/>
+        <div id="resp">________________</div>
+
+    </fieldset>    
+</div>
+<script>
+    function pais(){
+        var p = window.document.querySelector('input#tpais')
+        var pes = window.document.getElementById('resp')
+        pes.innerHTML = `Sua Resposta é ${p}`
+        var b = 'brasil'
+        if(p==b){
+            pes.innerHTML = 'Você é Brasileiro'
+        }else{
+            pes.innerHTML = 'Você é '
+        }
+
+    }
+</script>
+</body>
+</html>
